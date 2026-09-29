@@ -15,11 +15,11 @@ afterAll(async () => {
     }
 });
 
-test('homepage displays Welcome to CI/CD', async () => {
+test('homepage displays Hello DevOps', async () => {
     await driver.get(process.env.APP_URL);
 
     const header = await driver.findElement(By.css('h1'));
     const text = await header.getText();
 
-    expect(text).toBe('Welcome to CI/CD');
+    expect(text).toBe('Hello DevOps');
 });
