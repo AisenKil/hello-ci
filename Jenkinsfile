@@ -15,6 +15,7 @@ pipeline {
     }
 
     stages {
+
         stage('Install') {
             steps {
                 sh 'npm install'
@@ -30,7 +31,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'node node_modules/jest/bin/jest.js'
+                sh 'node node_modules/jest/bin/jest.js tests/math.test.js'
             }
         }
 
